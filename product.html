@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="nav">
+            <div class="icons">
+                <span class="material-icons">location_on </span>
+                <a>Track Order</a>
+            </div>
+            <div class="icons">
+                <span class="material-icons">speaker_notes</span>
+                <a>Retrived Quote</a>
+            </div>
+        </div>
+        <div id="nav-1">
+            <div id="nav-left">
+                <span class="material-icons" id="menu">menu </span>
+                <img class="carparts-logo" onclick="redirectToHome()" style="cursor: pointer;"
+                    src="https://cld.partsimg.com/image/upload/v1605623427/carparts/logos/wordmark/full_color/CP_WORDMARK_COLOUR_RGB_HR.png" />
+            </div>
+
+            <div class="nav-middle">
+                <div class="search">
+                    <input type="text" placeholder="Search by Part Name, Part Number, Vehicle or Brand">
+                    <button type="submit"><span class="material-icons" id="searchbtn">search</span></button>
+                </div>
+            </div>
+
+            <div id="nav-right">
+                <div class="sign-in" style="cursor: pointer;" onclick="redirectToLogin()">
+                    <span class="material-icons" id="signicon">person</span>
+                    <a>Sign In<br>or Create Account</a>
+                </div>
+                <div id="cart" onclick="redirectToCart()" style="cursor: pointer;">
+                    <span class="material-icons" id="carticon">shopping_cart </span>
+                    <span
+                        style="margin-left: -25px;color: rgb(255, 0, 0);font-weight: 700;font-size: 17px;margin-top: -10px;"
+                        id="count">0</span>
+                </div>
+            </div>
+        </div>
+        <div id="nav-2">
+            <div class="nav-2-left">
+                <div>
+                    <span class="material-icons" id="location">location_on </span>
+                </div>
+                <div class="shipaddress">
+                    <span>Shipping to:</span>
+                    <h5>La Sall... 61301</h5>
+                </div>
+            </div>
+            <div>
+                <div class="partsname">
+                    <ul>
+                        <li onclick="redirectToProductPage()">Auto Body Parts & Mirrors</li>
+                        <li onclick="redirectToProductPage()">Headlights & Lighting</li>
+                        <li onclick="redirectToProductPage()">Engine & Drivetrain</li>
+                        <li onclick="redirectToProductPage()">Brakes, Suspension & Steering</li>
+                        <li onclick="redirectToProductPage()">Interior</li>
+                        <li onclick="redirectToProductPage()">Exterior</li>
+                        <li onclick="redirectToProductPage()">Tools & Garage</li>
+                        <li onclick="redirectToProductPage()">Wheels & Tires</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<!--         <div id="dropdown"
+            style="width: 100%; height: 200px; background-color: yellow; position: absolute; display: none;">
+            <div onclick="cross()">X</div>
+        </div> -->
+
+        <div id="nav-3">
+            <div class="shippingupdates">
+                <h3>Shipping Update</h3>
+                <a>Find Out More</a>
+            </div>
+        </div>
+    </div>
+    <div id="products_container">
+        <div class="product-list">
+            <ul>
+                <li style="color: rgb(51, 51, 51); cursor: pointer;" onclick="redirectToHome()">Home</li>
+                <li style="color:  rgb(46, 71, 135);">></li>
+                <li style="color: black; font-weight: bold;">Bumper Cover</li>
+            </ul>
+        </div>
+        <div class="productdesp">
+            <h1>Bumper Covers</h1>
+            <span>
+                <p>Driving with a damaged bumper cover isn’t just unsightly. It also puts your life and vehicle
+                    at risk.
+                    Replace it
+                    immediately with a high-quality front bumper cover or rear bumper cover from CarParts.com.
+                    Our
+                    heavy-duty bumper cover
+                    replacements can improve your ride’s appearance and reduce the shock caused by accidents.
+                    All our
+                    products are...</p>
+            </span>
+        </div>
+        <div class="p1">
+            <div class="filter">
+                <h4>Refine by:</h4>
+                <h4>Brand</h4>
+                <div class="brandlabel">
+                    <div>
+                        <input type="checkbox">
+                        <label>Replacement</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>ReplaceXL</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>GenuineXL</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox">
+                        <label>Crown</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox">
+                        <label>Boltan Premiere</label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="product-catalogue">
+                <h3>Shop Catalog</h3>
+                <hr style="background-color: rgb(252, 244, 244);">
+                <div id="product-data"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <hr style="background-color: rgb(219, 209, 209);">
+        <div class="popularsearch">
+            <span>
+                <strong>Popular Searches :</strong>
+                <a href="#"><span>headlights,</span></a>
+                <a href="#"><span>bumper cover,</span></a>
+                <a href="#"><span>car fender,</span></a>
+                <a href="#"><span>radiator support,</span></a>
+                <a href="#"><span>catalytic converter,</span></a>
+                <a href="#"><span>car mirror,</span></a>
+                <a href="#"><span>car hood,</span></a>
+                <a href="#"><span>step bumper,</span></a>
+                <a href="#"><span>lower control arm,</span></a>
+                <a href="#"><span>tail light,</span></a>
+                <a href="#"><span>window regulator,</span></a>
+                <a href="#"><span>fuel pump replacement,</span></a>
+            </span>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="footer-1">
+            <div class="footerlist">
+                <div>
+                    <strong>Contact us</strong>
+                </div>
+                <div style="display: inline-block;">
+                    <span class="material-icons">location_on </span>
+                </div>
+                <div class="contactus">
+                    <strong>Address</strong>
+                    <span>
+                        <p style="margin-top: 0px;">4800 Industrial Blvd. Door # 43-45<span style="display: block;">
+                                Peru, IL 61354</span></p>
+                    </span>
+                </div>
+                <div></div>
+                <div style="display: inline-block;">
+                    <span class="material-icons">call</span>
+                </div>
+                <div class="contactus">
+                    <strong>Phone Number</strong>
+                    <span>
+                        <p style="margin-top: 0px;">1-866-529-0412</p>
+                    </span>
+                </div>
+
+                <div></div>
+                <div style="display: inline-block;">
+                    <span class="material-icons">email</span>
+                </div>
+                <div class="contactus">
+                    <span>
+                        <p style="margin-top: 0px; cursor: pointer;">Email Us</p>
+                    </span>
+                </div>
+
+                <div></div>
+                <div style="display: inline-block;">
+                    <span class="material-icons">chat</span>
+                </div>
+                <div class="contactus">
+                    <span>
+                        <p style="margin-top: 0px; cursor: pointer;">Live Chat</p>
+                    </span>
+                </div>
+
+                <div></div>
+                <div style="display: inline-block;">
+                    <span class="material-icons">announcement</span>
+                </div>
+                <div class="contactus">
+                    <span>
+                        <p style="margin-top: 0px; cursor: pointer;">Website Feedback</p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="footerlist-1">
+                <div>
+                    <strong>Customer Service</strong>
+                </div>
+                <div class="faq">
+                    <ul>
+                        <li>FAQ</li>
+                        <li>Returns</li>
+                        <li>Retrieve Quote</li>
+                        <li>Coupons</li>
+                        <li>Shipping Policy</li>
+                        <li>Return Policy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footerlist-1">
+                <div>
+                    <strong>About Us</strong>
+                </div>
+                <div class="faq">
+                    <ul>
+                        <li>Company Info</li>
+                        <li>Press Releases</li>
+                        <li>Careers</li>
+                        <li>Reviews</li>
+                        <li>Investor Relations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footerlist-1">
+                <div>
+                    <strong>Blog</strong>
+                </div>
+                <div class="faq">
+                    <ul>
+                        <li>In the Garage Home</li>
+                        <li>Auto Repair 101</li>
+                        <li>DIY Guides</li>
+                        <li>OBD-II Trouble Codes</li>
+                        <li>Automotive Features</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footerlist-1">
+                <div>
+                    <strong>Catalogs</strong>
+                </div>
+                <div class="faq">
+                    <ul>
+                        <li>All Makes</li>
+                        <li>All Brands</li>
+                        <li>All Parts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div></div>
+        <div class="footer-2">
+            <div class="carpartslogo">
+                <img
+                    src="https://cld.partsimg.com/image/upload/v1605623358/carparts/logos/badge_wordmark/full_color/CP_LOGO_COLOUR_RGB_HR.png" />
+            </div>
+            <div class="follow">
+                <strong>Follow Us@CarPartscom</strong>
+                <span>
+                    <p>
+                        #DrivingMemories</p>
+                </span>
+                <div style="display: flex; margin-left: 5px;gap: 4px;">
+                    <div class="socialicon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="socialicon">
+                        <i class="fab fa-facebook-square"></i>
+                    </div>
+                    <div class="socialicon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>
+                <span>
+                    <p>Copyright ©2021 CarParts.com, Inc. All Rights Reserved.</p>
+                </span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 2px;">
+                <a>Terms of Use</a>
+                <a>Privacy Policy</a>
+                <a>California Supply Chain Disclosure</a>
+            </div>
+            <div style=" margin-top: 2px;">
+                <a>Accessibility Statement</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="product.js"></script>
+<script src="https://kit.fontawesome.com/488e5e3e71.js" crossorigin="anonymous"></script>
